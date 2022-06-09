@@ -6,27 +6,12 @@ import { NavLink } from 'react-router-dom';
 
 const Dialogs = (props) => {
 
-  let massage = [
-    { id: 1, massage: 'Will be peace' },
-    { id: 2, massage: 'Hi' },
-    { id: 3, massage: 'Bay' },
-    { id: 4, massage: 'How are you?' },
-  ]
-
-  let dialogsData = [
-    { id: 1, name: 'Dima' },
-    { id: 2, name: 'Tom' },
-    { id: 3, name: 'Max' },
-    { id: 4, name: 'Anton' },
-    { id: 5, name: 'Mia' }
-  ]
-
-  let doalogsElements = dialogsData.map((el) => {
+  let doalogsElements = props.dialogsData.map((el) => {
     return <DialogItem id={el.id} name={el.name} />
   })
 
 
-  let massagesElimints = massage.map((el) => {
+  let massagesElimints = props.massage.map((el) => {
     return <Massage massage={el.massage} />
   })
 

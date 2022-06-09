@@ -3,17 +3,10 @@ import s from './profole.module.css';
 import ProfileInfo from './ProfoleInfo/ProfileInfo';
 
 const Profiles = (props) => {
-
-    let postsData = [
-    { id: 1, message: 'Hello', likeCount: 800 },
-    { id: 2, message: 'You are luckiest', likeCount: 5 },
-    { id: 3, message: 'You are beautifu', likeCount: 88 },
-  ]
-
-
+  console.log(props.postsData)
   return <div>
     <ProfileInfo />
-    <MyPosts postsData={postsData}/>
+    <MyPosts postsData={props.postsData}/>
   </div>
 }
 

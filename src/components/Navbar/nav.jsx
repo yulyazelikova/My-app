@@ -5,10 +5,10 @@ let NavActive = (navData) => {
   return navData.isActive ? s.activeLink : s.navLink
 }
 
-const Navbar = () => {
+const Navbar = (props) => {
   return <nav className={s.nav}>
     <div className={s.item} >
-      <NavLink to='/profiles' className={NavActive}  > Profile</NavLink>
+      <NavLink to='/profiles' className={NavActive}> Profile</NavLink>
     </div>
     <div className={s.item}>
       <NavLink to='/dialogs' className={NavActive}>Messages</NavLink>
