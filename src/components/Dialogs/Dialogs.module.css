@@ -1,0 +1,18 @@
+.dialogs {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  padding: 20px;
+  line-height: 40px;
+}
+
+.dialogItems {}
+
+.dialog {
+  font-size: 25px;
+}
+
+.massges {}
+
+.massge {
+  font-size: 20px;
+}

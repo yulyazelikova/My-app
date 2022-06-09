@@ -1,0 +1,33 @@
+.nav {
+  grid-area: n;
+  background-color: rgb(250, 242, 248);
+}
+
+.item {
+  padding: 10px;
+}
+
+.item {
+  padding: 10px;
+}
+
+.activeLink,
+.navLink {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.activeLink {
+  color: rgb(75, 149, 214);
+}
+
+.navLink {
+  color: rgb(36, 110, 110);
+}
+
+.activeLink:hover,
+.navLink:hover {
+  border-bottom: 3px rgb(36, 110, 110) solid;
+  opacity: 0.5;
+}
