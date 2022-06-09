@@ -1,18 +1,18 @@
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
 
-let postsData = [
-  { id: 1, message: 'Hello', likeCount: 800 },
-  { id: 2, message: 'You are luckiest', likeCount: 5 },
-  { id: 3, message: 'You are beautifu', likeCount: 88 },
-]
+const MyPosts = (props) => {
 
-let postsElements = postsData.map(el => {
-  return <Post message={el.message} likeCount={el.likeCount} />
-})
+  let postsData = [
+    { id: 1, message: 'Hello', likeCount: 800 },
+    { id: 2, message: 'You are luckiest', likeCount: 5 },
+    { id: 3, message: 'You are beautifu', likeCount: 88 },
+  ]
 
-console.log(postsData[0].likeCount)
-const MyPosts = () => {
+  let postsElements = props.postsData.map(el => {
+    return <Post message={el.message} likeCount={el.likeCount} />
+  })
+
   return (
     <div className={s.postsBlock}>
       <div>

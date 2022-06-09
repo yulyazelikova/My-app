@@ -22,7 +22,6 @@ function App() {
             <Route path='/music/*' element={<Music />} />
           </Routes>
         </div>
-
       </div>
     </BrowserRouter>
   );
