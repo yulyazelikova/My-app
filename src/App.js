@@ -9,16 +9,15 @@ import News from './components/News/News';
 import Profiles from './components/Profile/profole';
 
 function App(props) {
-  // debugger;
   return (
     <BrowserRouter>
       <div className='app-wrapper'>
         <Header />
-        <Navbar />
+        <Navbar sitebar={props.state.sitebar}  />
         <div className='app-wrapper-content'>
           <Routes>
-            <Route path='/profiles/*' element={<Profiles postsData={props.postsData}/>} />
-            <Route path='/dialogs/*' element={<Dialogs massage={props.massage}  dialogsData={props.dialogsData} />} />
+            <Route path='/profiles/*' element={<Profiles postsData={props.state.profilePage.postsData}/>} />
+            <Route path='/dialogs/*' element={<Dialogs massage={props.state.dialogsPage.massage}  dialogsData={props.state.dialogsPage.dialogsData} />} />
             <Route path='/news/*' element ={<News />}/>
             <Route path='/music/*' element={<Music />} />
           </Routes>
