@@ -16,3 +16,12 @@
 .massge {
   font-size: 20px;
 }
+
+.dialogAva{
+  width: 20px;
+  height: 20px;
+  background-color: blueviolet;
+  display: inline-block;
+  margin-right: 10px;
+  border-radius: 50%;
+}
