@@ -2,6 +2,7 @@ import Friend from './Friend/Friend';
 import s from './Friends.module.css';
 
 const Friends = (props) => {
+
   let friendsElements = props.friendsDate.map(el => <Friend name={el.name} url={el.url} />)
 
   return (<div className={s.wraperFriends}>

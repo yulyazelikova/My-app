@@ -1,18 +1,18 @@
+import React from 'react';
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
 
 const MyPosts = (props) => {
-
-
-  // let postsData = [
-  //   { id: 1, message: 'Hello', likeCount: 800 },
-  //   { id: 2, message: 'You are luckiest', likeCount: 5 },
-  //   { id: 3, message: 'You are beautifu', likeCount: 88 },
-  // ]
-
   let postsElements = props.postsData.map(el => {
     return <Post message={el.message} likeCount={el.likeCount} />
   })
+
+  let newPostRlement = React.createRef();
+
+  let addPost = () => {
+    let text = newPostRlement.current.value;
+    alert(text)
+  }
 
   return (
     <div className={s.postsBlock}>
@@ -21,10 +21,10 @@ const MyPosts = (props) => {
       </div>
       <div>
         <div>
-          <textarea />
+          <textarea ref={newPostRlement}></textarea>
         </div>
         <div>
-          <button>Send</button>
+          <button onClick={addPost}>Send</button>
         </div>
       </div>
       <div className={s.posts}>

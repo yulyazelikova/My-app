@@ -8,11 +8,11 @@ let state = {
     },
     dialogsPage: {
         dialogsData: [
-            { id: 1, name: 'Dima' },
-            { id: 2, name: 'Tom' },
-            { id: 3, name: 'Max' },
-            { id: 4, name: 'Anton' },
-            { id: 5, name: 'Mia' }
+            { id: 1, name: 'Dima', url: 'https://i.pinimg.com/originals/a4/c0/d2/a4c0d2ee7fa4cd96bcd5bf148f7ba787.jpg' },
+            { id: 2, name: 'Tom', url: 'https://img-fotki.yandex.ru/get/3108/227626273.12/0_1bb734_bd156633_XXXL.jpg' },
+            { id: 3, name: 'Max', url: 'https://www.domashniy-comfort.ru/images/stories/picture/00000korgi/korg_002.jpg' },
+            { id: 4, name: 'Anton', url: 'https://farm8.staticflickr.com/7051/6951130281_220d9085c1_b.jpg'},
+            { id: 5, name: 'Mia', url: 'https://funart.pro/uploads/posts/2021-07/1626883983_40-funart-pro-p-rogataya-sova-zhivotnie-krasivo-foto-54.jpg' }
         ],
         massage: [
             { id: 1, massage: 'Will be peace' },

@@ -3,10 +3,9 @@ import s from './profole.module.css';
 import ProfileInfo from './ProfoleInfo/ProfileInfo';
 
 const Profiles = (props) => {
-  console.log(props.postsData)
   return <div>
     <ProfileInfo />
-    <MyPosts postsData={props.postsData}/>
+    <MyPosts postsData={props.profilePage.postsData}/>
   </div>
 }
 

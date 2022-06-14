@@ -18,10 +18,12 @@
 }
 
 .dialogAva{
-  width: 20px;
-  height: 20px;
-  background-color: blueviolet;
   display: inline-block;
   margin-right: 10px;
+}
+
+.dialogAva img{
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
