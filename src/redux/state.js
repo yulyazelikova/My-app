@@ -1,3 +1,5 @@
+import { renderEntrireTree } from "../render";
+
 let state = {
     profilePage: {
         postsData: [
@@ -35,8 +37,9 @@ let state = {
         id: 5,
         message: postMassage,
         likeCount: 0,
-    }
+    };
     state.profilePage.postsData.push(newPost);
+    renderEntrireTree(state);
 }
 
 export default state
