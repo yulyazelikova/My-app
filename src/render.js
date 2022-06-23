@@ -4,17 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { addPost } from './redux/state';
+import { updateNewPostText } from './redux/state';
 import { BrowserRouter } from 'react-router-dom';
 
-export let renderEntrireTree = (state) => {
-    const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
+export let renderEntrireTree = (state) => {
     root.render(
         <React.StrictMode>
             <BrowserRouter>
-                <App state={state} addPost={addPost} />
+                <App state={state} addPost={addPost}  updateNewPostText={updateNewPostText}/>
             </BrowserRouter>
-
         </React.StrictMode>
     );
 }

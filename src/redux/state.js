@@ -7,6 +7,7 @@ let state = {
             { id: 2, message: 'You are luckiest', likeCount: 5 },
             { id: 3, message: 'You are beautifu', likeCount: 88 },
         ],
+        newPostText: 'Hello',
     },
     dialogsPage: {
         dialogsData: [
@@ -32,14 +33,21 @@ let state = {
     }
 }
 
- export let addPost = (postMassage) =>{
+window.state= state;
+ export let addPost = () =>{
     let newPost = {
         id: 5,
-        message: postMassage,
+        message: state.profilePage.newPostText,
         likeCount: 0,
     };
     state.profilePage.postsData.push(newPost);
+    state.profilePage.newPostText = '';
     renderEntrireTree(state);
 }
+
+export let updateNewPostText = (newText) =>{
+    state.profilePage.newPostText = newText;
+    renderEntrireTree(state);
+};
 
 export default state
