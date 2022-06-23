@@ -8,7 +8,7 @@ import React from 'react';
 const Dialogs = (props) => {
 
   let doalogsElements = props.dialogsPage.dialogsData.map((el) => {
-    return <DialogItem id={el.id} name={el.name}  url={el.url}/>
+    return <DialogItem id={el.id} name={el.name} url={el.url} />
   })
 
   let massagesElimints = props.dialogsPage.massage.map((el) => {
@@ -18,9 +18,12 @@ const Dialogs = (props) => {
   let newMassge = React.createRef();
 
   let addMassage = () => {
-    let text = newMassge.current.value;
-    alert(text)
+    props.addMassage();
+  }
 
+  let onMassageChange = () => {
+    let text = newMassge.current.value;
+    props.updateNewMassageText(text);
   }
 
   return (
@@ -31,9 +34,11 @@ const Dialogs = (props) => {
       <div className={s.massages}>
         {massagesElimints}
         <div>
-        <textarea ref={newMassge}></textarea>
-        <button onClick={addMassage}>Send</button>
-      </div>
+          <textarea ref={newMassge}
+            onChange={onMassageChange}
+            value={props.dialogsPage.newMassage} />
+          <button onClick={addMassage}>Send</button>
+        </div>
       </div>
     </div>
   )

@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { addPost } from './redux/state';
 import { updateNewPostText } from './redux/state';
+import { updateNewMassageText } from './redux/state';
+import { addMassage } from './redux/state';
 import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -13,7 +15,9 @@ export let renderEntrireTree = (state) => {
     root.render(
         <React.StrictMode>
             <BrowserRouter>
-                <App state={state} addPost={addPost}  updateNewPostText={updateNewPostText}/>
+                <App state={state} addPost={addPost} updateNewPostText={updateNewPostText}
+                    addMassage={addMassage}
+                    updateNewMassageText={updateNewMassageText} />
             </BrowserRouter>
         </React.StrictMode>
     );
