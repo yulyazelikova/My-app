@@ -1,4 +1,6 @@
-import { renderEntrireTree } from "../render";
+let renderEntrireTree = () => {
+    console.log("state changer")
+}
 
 let state = {
     profilePage: {
@@ -36,7 +38,7 @@ let state = {
 
 window.state = state;
 
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         id: 5,
         message: state.profilePage.newPostText,
@@ -47,12 +49,12 @@ export let addPost = () => {
     renderEntrireTree(state);
 }
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
     renderEntrireTree(state);
 };
 
-export let addMassage = () => {
+export const addMassage = () => {
     let newMassage = {
         id: 5,
         massage: state.dialogsPage.newMassage,
@@ -62,9 +64,13 @@ export let addMassage = () => {
     renderEntrireTree(state);
 }
 
-export let updateNewMassageText = (newText) => {
+export const updateNewMassageText = (newText) => {
     state.dialogsPage.newMassage = newText;
     renderEntrireTree(state);
 };
+
+export const subscride = (observer) => {
+    renderEntrireTree = observer;
+}
 
 export default state
